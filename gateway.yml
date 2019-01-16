@@ -26,14 +26,16 @@
 #spring.redis.host=localhost
 #spring.redis.port=6379
 
-info:
-  component: Zuul Server
+spring:
+  application:
+    name: gateway
 
 zuul:
   routes:
     firm:
       path: /firms/**
       serviceId: firm
+      strip-prefix: false
 
 server:
   port: 8080
