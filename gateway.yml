@@ -33,3 +33,7 @@ spring:
 server:
   port: 8080
 
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 11000
+ribbon:
+          ConnectTimeout: 10000
+            ReadTimeout: 10000
