@@ -33,13 +33,18 @@ spring:
 server:
   port: 8080
 
-  #hystrix:
-  #  command:
-  #      defaultr:
-  #          execution:
-  #              isolation:
-  #                  thread:
-  #                      timeoutInMilliseconds: 10
+hystrix:
+  command:
+    RemoteMessageClientCommand:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+    RemoteMessageAnnotationClient:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
 ribbon:
   ConnectTimeout: 1000000
   ReadTimeout: 1000000
