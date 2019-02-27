@@ -33,13 +33,13 @@ spring:
 server:
   port: 8080
 
-hystrix:
-  command:
-      defaultr:
-          execution:
-              isolation:
-                  thread:
-                      timeoutInMilliseconds: 10
+  #hystrix:
+  #  command:
+  #      defaultr:
+  #          execution:
+  #              isolation:
+  #                  thread:
+  #                      timeoutInMilliseconds: 10
 ribbon:
   ConnectTimeout: 1000000
   ReadTimeout: 1000000
